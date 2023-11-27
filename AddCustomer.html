@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-right: 8px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #submitBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #cancelBtn {
+            background-color: #ccc;
+        }
+
+        button:hover {
+            filter: brightness(90%);
+        }
+    </style>
+</head>
+<body>
+
+    <form id="accountForm">
+        <label for="accountNo">Account Number:</label>
+        <input type="text" id="accountNo" name="accountNo" required>
+
+        <label for="balance">Balance:</label>
+        <input type="text" id="balance" name="balance" required>
+
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required>
+
+        <label for="dateOpened">Date Opened:</label>
+        <input type="date" id="dateOpened" name="dateOpened" required>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+        </select>
+
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" name="customerId" required>
+
+        <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
+        <button type="button" id="cancelBtn" onclick="clearForm()">Cancel</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            var formData = new FormData(document.getElementById('accountForm'));
+            formData.forEach(function(value, key){
+                console.log(key, value);
+            });
+            // Add additional logic for form submission, e.g., sending data to a server
+        }
+
+        function clearForm() {
+            document.getElementById('accountForm').reset();
+        }
+    </script>
+
+</body>
+</html>

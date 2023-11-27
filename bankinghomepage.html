@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Online Banking</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: #008b4c; 
+            /* You can also use color names like "white" or "blue" */
+        }
+    </style>
+    <script type="text/javascript">
+        function ctck() {
+            var sds = document.getElementById("dum");
+            // Add your JavaScript logic here
+        }
+    </script>
+</head>
+<body>
+
+    <div id="top_links">
+        <div id="header" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1>TSU Bank Pvt Ltd <span class="style1"></span></h1>
+            <h2>Wealth Management</h2>
+            <style>
+                body {
+                    background-color: #f4ecf1; /* Replace with your desired color code */
+                    /* You can also use color names like "white" or "blue" */
+                }
+            </style>
+        </div>
+    </div>
+
+    <div id="navigation">
+        <ul>
+            <li><a href="http://localhost/contact/login.html">EMPLOYEE LOGIN</a></li>
+            <li><a href="http://localhost/contact/login.html">CUSTOMER LOGIN</a></li>
+        </ul>
+    </div>
+
+    <table cellpadding="0" cellspacing="0" id="content1">
+        <tr align="justify">
+            <td class="con" valign="top" style="background-color: #ffd700; width: 33.33%;">
+                <div id="heade1">
+                    <h1>Stocks</h1>
+                </div>
+                <p>Whether you are actively trading or investing for the long term, our platforms are filled with innovative tools and features to give you everything you need to make smarter, more informed decisions. No matter which platform you choose, you can research stocks, place trades, and manage your portfolio with knowledge backed by live-streaming CNBC, real-time quotes and specialists with years of experience.</p>
+            </td>
+    
+            <td class="con" valign="top" style="background-color: #a190ee; width: 33.33%;">
+                <div id="heade2">
+                    <h1>Bonds</h1>
+                </div>
+                <p>We sell Treasury Bonds for a term of either 20 or 30 years. Bonds pay a fixed rate of interest every six months until they mature. You can hold a bond until it matures or sell it before it matures.</p>
+            </td>
+    
+            <td class="con" valign="top" style="background-color: #87ceeb; width: 33.33%;">
+                <div id="heade3">
+                    <h1>MutualFunds</h1>
+                </div>
+                <p>We partner with managers ranging from small specialists to large global players to offer an array of investment strategies. With a rigorous selection and monitoring process, we focus on generating returns across market environments. We believe consistent alpha generation via active management is a realistic goal. We have successfully navigated changing markets for nearly 100 years</p>
+            </td>
+        </tr>
+    </table>
+    
+    <table style="width: 897px; background: #dd7419; margin: 0 auto;">
+        <tr align="justify">
+            <td width="299" valign="top" style="border-right: #666666 1px dotted;">
+                <div id="services">
+                    <h1>Services</h1>
+                    <ul>
+                        <li><a href="#">Check Account Balance</a></li>
+                        <li><a href="#">Loan Interest Rates</a></li>
+                        <li><a href="#">No Fee Checking Account</a></li>
+                    </ul>
+                </div>
+            </td>
+
+            <td width="299" valign="top" style="border-right: #666666 1px dotted;">
+                <div id="welcome">
+                    <h1>Welcome</h1>
+                    
+                    <p>We understand institutional investors, because we are one ourselves. Our mission is to help sophisticated investment professionals navigate today’s challenging environment to generate alpha and manage risk, regardless of market conditions. We welcome the opportunity to bring the power of TSU Bank and our managers to you and your organizations.</p>
+                </div>
+            </td>
+
+            <td width="299" valign="top">
+                <div id="news">
+                    <h1>Contact Us:</h1>
+                    
+                    
+                    <p>mrenu@tnstate.edu</p>
+                    <p>kmachava@my.tnstate.edu</p>
+
+                    <br>
+                    
+                    
+                    
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYSE Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #stock-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<footer>
+    <div id="footer-content">
+        <h2>Real time Stock Quotes </h2>
+        <div id="footer-stock-info">Loading...</div>
+    </div>
+</footer>
+
+<script>
+    const apiKey = 'YOUR_ALPHA_VANTAGE_API_KEY';
+    const stockSymbols = ['AAPL', 'TSLA', 'META', 'NFLX'];
+
+    function createStockInfoElement(stockName, stockQuote) {
+        const stockInfoElement = document.createElement('p');
+        stockInfoElement.innerText = `Stock Name: ${stockName} | Stock Quote: $${stockQuote}`;
+        return stockInfoElement;
+    }
+
+    async function fetchStockQuotes(containerId) {
+        const stockInfoContainer = document.getElementById(containerId);
+        stockInfoContainer.innerHTML = '';
+
+        try {
+            for (const stockSymbol of stockSymbols) {
+                const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${stockSymbol}&apikey=${apiKey}`;
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data['Global Quote']) {
+                    const stockName = data['Global Quote']['01. symbol'];
+                    const stockQuote = data['Global Quote']['05. price'];
+                    const stockInfoElement = createStockInfoElement(stockName, stockQuote);
+                    stockInfoContainer.appendChild(stockInfoElement);
+                } else {
+                    stockInfoContainer.innerText = 'Failed to fetch stock quotes';
+                    break;
+                }
+            }
+        } catch (error) {
+            console.error('Error fetching stock quotes:', error);
+            stockInfoContainer.innerText = 'Failed to fetch stock quotes';
+        }
+    }
+
+    // Fetch stock quotes on page load
+    window.onload = function () {
+        fetchStockQuotes('stock-info');
+        fetchStockQuotes('footer-stock-info');
+    };
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
+
