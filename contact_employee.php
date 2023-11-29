@@ -1,9 +1,9 @@
 <?php
     // Establish a connection to the database
-    $con = mysqli_connect('localhost', 'root', '', 'TSUInv');
+    $con = mysqli_connect('localhost', 'root', '', 'stockMarket');
 
     // Retrieve form data
-    $txtId = $_POST['customerid'];
+    
     $txtFirstname = $_POST['firstname'];
     $txtLastname = $_POST['lastname'];
     $txtCity = $_POST['city'];
@@ -13,8 +13,8 @@
     $txtZip = $_POST['Zip'];
 
     // Prepare SQL query
-    $sql = "INSERT INTO `customer` (`Cust_ID`, `F_Name`, `L_Name`, `City`, `Contact_Number`, `Email`, `Date_of_Birth`, `Zip`)
-            VALUES ('$txtId', '$txtFirstname', '$txtLastname', '$txtCity', '$txtContactnumber', '$txtEmail', '$txtDateofbirth', '$txtZip')";
+    $sql = "INSERT INTO `customer` ( `F_Name`, `L_Name`, `City`, `Contact_Number`, `Email`, `Date_of_Birth`, `Zip`)
+            VALUES ('$txtFirstname', '$txtLastname', '$txtCity', '$txtContactnumber', '$txtEmail', '$txtDateofbirth', '$txtZip')";
 
     // Execute SQL query
     $rs = mysqli_query($con, $sql);

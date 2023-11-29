@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect('localhost', 'root', '','TSUInv');
+    $con = mysqli_connect('localhost', 'root', '','stockMarket');
 
     
     if (mysqli_connect_errno())

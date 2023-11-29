@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'root', '','tsubank');
+$con = mysqli_connect('localhost', 'root', '','stockMarket');
 // Check connection
 if (mysqli_connect_errno())
 {

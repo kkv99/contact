@@ -1,190 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Online Banking</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <style>
-        body {
-            background-color: #008b4c; 
-            /* You can also use color names like "white" or "blue" */
-        }
-    </style>
-    <script type="text/javascript">
-        function ctck() {
-            var sds = document.getElementById("dum");
-            // Add your JavaScript logic here
-        }
-    </script>
-</head>
-<body>
+<html lang="en" class="h-100">
 
-    <div id="top_links">
-        <div id="header" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <h1>TSU Bank Pvt Ltd <span class="style1"></span></h1>
-            <h2>Wealth Management</h2>
-            <style>
-                body {
-                    background-color: #f4ecf1; /* Replace with your desired color code */
-                    /* You can also use color names like "white" or "blue" */
-                }
-            </style>
+<head>
+  <title>Online Banking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="tsu-header py-3">
+  <div class="row flex-nowrap justify-content-between align-items-center remove-margin">
+    <div class="col-6 text-center">
+      <a class="tsu-header-logo text-dark" href="#">    
+        <div class="container">
+          <div class="row">
+            <div class="col-10">
+              <h1>TSU Bank Pvt Ltd </h1>
+            </div>
+          </div>
         </div>
+      </a>
     </div>
+    <div class="col-6 d-flex justify-content-end pl-0">
+      <a class="btn btn-outline-primary" href="login.html">LOGIN <i class="fa fa-user-o" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</header>
 
-    <div id="navigation">
-        <ul>
-            <li><a href="http://localhost/contact/login.html">EMPLOYEE LOGIN</a></li>
-            <li><a href="http://localhost/contact/login.html">CUSTOMER LOGIN</a></li>
+<body class="d-flex flex-column h-100">
+  <hr class="d-sm-none">
+  <div class="container mt-4" >
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#F7A278"></rect>
+          </svg>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Stocks</h1>
+            <p>Whether you are actively trading or investing for the long term, our platforms are filled with innovative
+              tools and features to give you everything you need to make smarter, more informed decisions. No matter which
+              platform you choose, you can research stocks, place trades, and manage your portfolio with knowledge backed
+              by live-streaming CNBC, real-time quotes and specialists with years of experience.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#a190ee"></rect>
+          </svg>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Bonds</h1>
+            <p>We sell Treasury Bonds for a term of either 20 or 30 years. Bonds pay a fixed rate of interest every six
+              months until they mature. You can hold a bond until it matures or sell it before it matures.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
+            preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#87ceeb"></rect>
+          </svg>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>MutualFunds</h1>
+            <p>We partner with managers ranging from small specialists to large global players to offer an array of
+              investment strategies. With a rigorous selection and monitoring process, we focus on generating returns
+              across market environments. We believe consistent alpha generation via active management is a realistic
+              goal. We have successfully navigated changing markets for nearly 100 years</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card border-0">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-center">Welcome To TSU Banking</h4>
+        <h6 class="card-subtitle mb-2 text-muted"><p style="text-align: center;">We understand institutional investors, because we are one ourselves. Our mission is to help sophisticated investment professionals navigate today’s challenging environment to generate alpha and manage risk, regardless of market conditions. We welcome the opportunity to bring the power of TSU Bank and our managers to you and your organizations.</p></h6>
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Services</h3>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Check Account Balance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Loan Interest Rates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">No Fee Checking Account</a>
+          </li>
         </ul>
-    </div>
-
-    <table cellpadding="0" cellspacing="0" id="content1">
-        <tr align="justify">
-            <td class="con" valign="top" style="background-color: #ffd700; width: 33.33%;">
-                <div id="heade1">
-                    <h1>Stocks</h1>
-                </div>
-                <p>Whether you are actively trading or investing for the long term, our platforms are filled with innovative tools and features to give you everything you need to make smarter, more informed decisions. No matter which platform you choose, you can research stocks, place trades, and manage your portfolio with knowledge backed by live-streaming CNBC, real-time quotes and specialists with years of experience.</p>
-            </td>
-    
-            <td class="con" valign="top" style="background-color: #a190ee; width: 33.33%;">
-                <div id="heade2">
-                    <h1>Bonds</h1>
-                </div>
-                <p>We sell Treasury Bonds for a term of either 20 or 30 years. Bonds pay a fixed rate of interest every six months until they mature. You can hold a bond until it matures or sell it before it matures.</p>
-            </td>
-    
-            <td class="con" valign="top" style="background-color: #87ceeb; width: 33.33%;">
-                <div id="heade3">
-                    <h1>MutualFunds</h1>
-                </div>
-                <p>We partner with managers ranging from small specialists to large global players to offer an array of investment strategies. With a rigorous selection and monitoring process, we focus on generating returns across market environments. We believe consistent alpha generation via active management is a realistic goal. We have successfully navigated changing markets for nearly 100 years</p>
-            </td>
-        </tr>
-    </table>
-    
-    <table style="width: 897px; background: #dd7419; margin: 0 auto;">
-        <tr align="justify">
-            <td width="299" valign="top" style="border-right: #666666 1px dotted;">
-                <div id="services">
-                    <h1>Services</h1>
-                    <ul>
-                        <li><a href="#">Check Account Balance</a></li>
-                        <li><a href="#">Loan Interest Rates</a></li>
-                        <li><a href="#">No Fee Checking Account</a></li>
-                    </ul>
-                </div>
-            </td>
-
-            <td width="299" valign="top" style="border-right: #666666 1px dotted;">
-                <div id="welcome">
-                    <h1>Welcome</h1>
-                    
-                    <p>We understand institutional investors, because we are one ourselves. Our mission is to help sophisticated investment professionals navigate today’s challenging environment to generate alpha and manage risk, regardless of market conditions. We welcome the opportunity to bring the power of TSU Bank and our managers to you and your organizations.</p>
-                </div>
-            </td>
-
-            <td width="299" valign="top">
-                <div id="news">
-                    <h1>Contact Us:</h1>
-                    
-                    
-                    <p>mrenu@tnstate.edu</p>
-                    <p>kmachava@my.tnstate.edu</p>
-
-                    <br>
-                    
-                    
-                    
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYSE Quotes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        #stock-container {
-            text-align: center;
-            margin: 50px;
-        }
-
-        footer {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-
-
-<footer>
-    <div id="footer-content">
-        <h2>Real time Stock Quotes </h2>
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-4">
+        <h3>Real time Stock Quotes</h3>
+        <br>
         <div id="footer-stock-info">Loading...</div>
+      </div>
     </div>
-</footer>
+  </div>
 
-<script>
+  <footer class="row footer mt-auto py-3 remove-margin" valign="bottom">
+    <div class="container">
+      <span class="d-flex text-muted justify-content-center">                    
+        <h6>Contact us: mrenu@tnstate.edu & kmachava@my.tnstate.edu</h6>       
+      </span>
+    </div>
+  </footer>
+
+  <script>
     const apiKey = 'YOUR_ALPHA_VANTAGE_API_KEY';
     const stockSymbols = ['AAPL', 'TSLA', 'META', 'NFLX'];
 
     function createStockInfoElement(stockName, stockQuote) {
-        const stockInfoElement = document.createElement('p');
-        stockInfoElement.innerText = `Stock Name: ${stockName} | Stock Quote: $${stockQuote}`;
-        return stockInfoElement;
+      const stockInfoElement = document.createElement('p');
+      stockInfoElement.innerText = `Stock Name: ${stockName} | Stock Quote: $${stockQuote}`;
+      return stockInfoElement;
     }
 
     async function fetchStockQuotes(containerId) {
-        const stockInfoContainer = document.getElementById(containerId);
-        stockInfoContainer.innerHTML = '';
+      const stockInfoContainer = document.getElementById(containerId);
+      stockInfoContainer.innerHTML = '';
 
-        try {
-            for (const stockSymbol of stockSymbols) {
-                const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${stockSymbol}&apikey=${apiKey}`;
-                const response = await fetch(apiUrl);
-                const data = await response.json();
+      try {
+        for (const stockSymbol of stockSymbols) {
+          const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${stockSymbol}&apikey=${apiKey}`;
+          const response = await fetch(apiUrl);
+          const data = await response.json();
 
-                if (data['Global Quote']) {
-                    const stockName = data['Global Quote']['01. symbol'];
-                    const stockQuote = data['Global Quote']['05. price'];
-                    const stockInfoElement = createStockInfoElement(stockName, stockQuote);
-                    stockInfoContainer.appendChild(stockInfoElement);
-                } else {
-                    stockInfoContainer.innerText = 'Failed to fetch stock quotes';
-                    break;
-                }
-            }
-        } catch (error) {
-            console.error('Error fetching stock quotes:', error);
+          if (data['Global Quote']) {
+            const stockName = data['Global Quote']['01. symbol'];
+            const stockQuote = data['Global Quote']['05. price'];
+            const stockInfoElement = createStockInfoElement(stockName, stockQuote);
+            stockInfoContainer.appendChild(stockInfoElement);
+          } else {
             stockInfoContainer.innerText = 'Failed to fetch stock quotes';
+            break;
+          }
         }
+      } catch (error) {
+        console.error('Error fetching stock quotes:', error);
+        stockInfoContainer.innerText = 'Failed to fetch stock quotes';
+      }
     }
 
     // Fetch stock quotes on page load
     window.onload = function () {
-        fetchStockQuotes('stock-info');
-        fetchStockQuotes('footer-stock-info');
+      fetchStockQuotes('stock-info');
+      fetchStockQuotes('footer-stock-info');
     };
-</script>
+  </script>
 
 </body>
+
 </html>
-
-
-</body>
-</html>
-
