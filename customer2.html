@@ -1,171 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Summary</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: #007bff;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Button styles */
-        .action-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .action-buttons button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .action-buttons button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Table styles */
-        .valuation-section {
-            margin: 30px 0;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .valuation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .valuation-table th, .valuation-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        .valuation-table th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <h1>Portfolio Summary</h1>
 
-    <p>
-        Welcome to your portfolio summary page. Here, you can view an overview of your investment portfolio.
-        
-    </p>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-primary text-center">Portfolio Summary</h1>
 
-    <!-- Action buttons -->
-    <div class="action-buttons">
-        <button id="buyStockButton" onclick="buyStock()">Buy Stock</button>
-        <button id="sellStockButton" onclick="sellStock()">Sell Stock</button>
-        <button id="buyBondsButton" onclick="buyBonds()">Buy Bonds</button>
-        <button id="sellBondsButton" onclick="sellBonds()">Sell Bonds</button>
-        <button id="buyMutualFundsButton" onclick="buyMutualFunds()">Buy Mutual Funds</button>
-        <button id="sellMutualFundsButton" onclick="sellMutualFunds()">Sell Mutual Funds</button>
+        <p class="lead text-center">
+            Welcome to your portfolio summary page. Here, you can view an overview of your investment portfolio.
+        </p>
+
+        <!-- Action buttons -->
+        <div class="d-flex justify-content-around mb-3">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#buyStockModal">Buy Stock</button>
+        </div>
+
+        <p class="text-center">
+            If you have any questions or need assistance, please <a href="contact.html">contact us</a>.
+        </p>
+
+        <!-- Current Valuation Section -->
+        <section class="bg-white p-4 rounded shadow-sm mt-4">
+            <h2 class="h4 mb-4">Current Valuation</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Asset Type</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stocks</td>
+                        <td><!-- Add logic to display current value for stocks --></td>
+                    </tr>
+                    <tr>
+                        <td>Bonds</td>
+                        <td><!-- Add logic to display current value for bonds --></td>
+                    </tr>
+                    <tr>
+                        <td>Mutual Funds</td>
+                        <td><!-- Add logic to display current value for mutual funds --></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
 
-    <p>
-        If you have any questions or need assistance, please <a href="contact.html">contact us</a>.
-    </p>
+    <!-- Buy Stocks Modal -->
+    <div class="modal fade" id="buyStockModal" tabindex="-1" role="dialog" aria-labelledby="buyStockModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buyStockModalLabel">Buy Stocks</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
-    <!-- Current Valuation Section -->
-    <section class="valuation-section">
-        <h2>Current Valuation</h2>
-        <table class="valuation-table">
-            <thead>
-                <tr>
-                    <th>Asset Type</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Stocks</td>
-                    <td><!-- Add logic to display current value for stocks --></td>
-                </tr>
-                <tr>
-                    <td>Bonds</td>
-                    <td><!-- Add logic to display current value for bonds --></td>
-                </tr>
-                <tr>
-                    <td>Mutual Funds</td>
-                    <td><!-- Add logic to display current value for mutual funds --></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form method="post" action="buy_stocks.php">
+                        <div class="form-group">
+                            <label for="stock_name">Stock Name:</label>
+                            <input type="text" class="form-control" id="stock_name" name="stock_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price per Unit:</label>
+                            <input type="number" step="0.01" class="form-control" id="price" name="price" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buy Stocks</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#stock_name').on('input', function () {
+                var stockName = $(this).val();
 
-    <!-- Add more content as needed -->
-
-    <script>
-        // JavaScript functions for buy and sell actions
-        function buyStock() {
-            // Add your buy stock logic here
-            alert('Buy stock logic goes here');
-        }
-
-        function sellStock() {
-            // Add your sell stock logic here
-            alert('Sell stock logic goes here');
-        }
-
-        function buyBonds() {
-            // Add your buy bonds logic here
-            alert('Buy bonds logic goes here');
-        }
-
-        function sellBonds() {
-            // Add your sell bonds logic here
-            alert('Sell bonds logic goes here');
-        }
-
-        function buyMutualFunds() {
-            // Add your buy mutual funds logic here
-            alert('Buy mutual funds logic goes here');
-        }
-
-        function sellMutualFunds() {
-            // Add your sell mutual funds logic here
-            alert('Sell mutual funds logic goes here');
-        }
+                $.ajax({
+                    type: 'GET',
+                    url: 'get_stock_price.php',
+                    data: { stock_name: stockName },
+                    success: function (response) {
+                        $('#price').val(response);
+                    },
+                    error: function (error) {
+                        console.log('Error fetching stock price:', error);
+                    }
+                });
+            });
+        });
     </script>
 </body>
+
 </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Insert Customer Details</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150vh;
+        }
+        .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: red;
+}
+
+        h1 {
+            font-size: 36px;
+            color: #333; /* Changed heading color to dark gray */
+            margin-bottom: 20px;
+            text-align: center; /* Center the text */
+            max-width: 100%; /* Ensure the heading doesn't overflow the container */
+            overflow: hidden; /* Hide any content that overflows */
+            white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+
+        form {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="date"] {
+            /* Adjust date input appearance for better cross-browser consistency */
+            appearance: none;
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+        }
+
+        input[type="reset"],
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="split left">
+        <div class="centered">
+            <h1><b> Customer Details</b></h1>
+    <form name="formcustomer" method="post" action="contact_employee.php">
+        <label for="firstname">First_Name</label>
+        <input type="text" name="firstname" required>
+
+        <label for="lastname">Last_Name</label>
+        <input type="text" name="lastname" required>
+
+        <label for="city">City</label>
+        <input type="text" name="city" required>
+
+        <label for="contactnumber">ContactNo</label>
+        <input type="int" name="contactnumber" required>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" required>
+
+        <label for="dateofbirth">Date_of_Birth</label>
+        <input type="Date" name="dateofbirth" required>
+
+        <label for="zip">Zip</label>
+        <input type="int" name="Zip" required>
+
+        <input type="reset">
+        <input type="submit">
+    </form>
+          
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="centered">
+            <h1><b> Customer Details</b></h1>
+            <form name="formcustomer" method="post" action="contact_employee.php">
+                <label for="firstname">First_Name</label>
+                <input type="text" name="firstname" required>
+        
+                <label for="lastname">Last_Name</label>
+                <input type="text" name="lastname" required>
+        
+                <label for="city">City</label>
+                <input type="text" name="city" required>
+        
+                <label for="contactnumber">ContactNo</label>
+                <input type="int" name="contactnumber" required>
+        
+                <label for="email">Email</label>
+                <input type="text" name="email" required>
+        
+                <label for="dateofbirth">Date_of_Birth</label>
+                <input type="Date" name="dateofbirth" required>
+        
+                <label for="zip">Zip</label>
+                <input type="int" name="Zip" required>
+        
+                <input type="reset">
+                <input type="submit">
+            </form>
+        </div>
+      </div>
+    
+</body>
+</html>

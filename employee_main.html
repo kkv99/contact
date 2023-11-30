@@ -41,9 +41,18 @@
     </style>
 </head>
 <body>
-    <h1><b>Employee Services</b></h1>
-    <p><a href="employee.html">Add New Customer</a></p>
+    <div class="container mt-4">
+        <span class="d-flex justify-content-center"><h1 style="text-transform: math-auto;">Hi, <span id="userName"></span></h1></span>
+    </div>
+
+    <h2><b>Employee Services</b></h2>
+    <p><a href="employee.html?user=" onclick="location.href=this.href+user;return false;">Add New Customer</a></p>
     <p><a href="get_allbalance.php">Fetch Customer Details</a></p>
     <p><a href="Dashboard.html">Show Investment Products</a></p>
 </body>
+
+<script>
+    const user = new URLSearchParams(window.location.search).get('user');
+    document.getElementById('userName').innerHTML = user;
+</script>
 </html>
